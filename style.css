@@ -1,7 +1,237 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+body {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-   
+  background-image: url(./images/bg\ body.png);
+  background-size: cover;
+  width: 100%;
 }
+
+.event-header {
+  width: 100%;
+  background-image: url(./images/pic.png);
+  background-size: cover;
+  height: 500px;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin-left: 175px;
+}
+
+div.logo {
+  background-image: url(./images/bg\ logo.svg);
+  backdrop-filter: blur(30px);
+  width: 240px;
+  margin-left: -200px;
+  background-repeat: no-repeat;
+}
+
+.Header-H1 {
+  position: absolute;
+  color: rgba(220, 86, 197, 1);
+  margin-left: 195px;
+  top: 50px;
+  width: 888px;
+  height: 122px;
+  font-weight: 900;
+  font-size: 70px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+
+}
+
+.event-input {
+  width: 270px;
+  height: 40px;
+  top: 214px;
+  left: 355px;
+  opacity: 1;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.event-input::placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(183, 183, 183);
+  padding-left: 20px;
+}
+
+.searchbtn {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 240px;
+}
+
+.search-country {
+  margin-left: 320px;
+  margin-top: -45px;
+}
+
+.event-search {
+  margin-left: 325px;
+  margin-top: 125px;
+}
+
+.card {
+  width: 200px;
+  height: 315px;
+}
+
+.EventsIMG {
+  width: 200px;
+  height: 227px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+#eventsContainer {
+  width: 946px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 4fr));
+  gap: 50px;
+  margin-top: 300px;
+  margin-left: 125px;
+}
+
+.EventsTitle {
+  color: rgba(220, 86, 197, 1);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.EventsDate {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: white;
+}
+
+.EventsVenue {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: white;
+}
+
+.decorpink {
+  width: 153px;
+  height: 143px;
+  margin-left: 70px;
+  margin-top: -10px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  opacity: 1;
+  border: 1px solid rgba(220, 86, 197, 0.3);
+  position: absolute;
+}
+
+#pagination {
+  margin-top: 50px;
+}
+
+#pagination button {
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 1;
+  border: 1px solid rgba(220, 86, 197, 1)
+}
+
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #220e2290;
+  backdrop-filter: blur(2px);
+  }
+  .modal-content{
+    margin-top: 350px;
+    margin-left: 350px;
+    width: 930px;
+    height: 1023px;
+    top: 201px;
+    left: 175px;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    opacity: 1;
+    background-color: rgba(255, 242, 253, 1);
+  }
+  .ModalIMG{
+    position: absolute;
+    width: 500px;
+    height: 641px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-top: 175px;
+    margin-left: 20px;
+  }
+  .FULLINFO{
+    margin-top: 150px;
+    margin-left: 550px;
+    position: absolute;
+  }
+ .FULLINFO h2{
+   color: rgba(220, 86, 197, 1);
+font-weight: 600;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+  }
+  .FULLINFO p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    max-width: 300px;
+   }
+  .close{
+   margin-top: 50px;
+   margin-left: 850px;
+   position: absolute;
+  }
+  .TICKETBTN{
+    width: 145px;
+height: 40px;
+top: 1037px;
+left: 625px;
+opacity: 1;
+border-radius: 5px;
+background: rgba(76, 0, 254, 1);
+color: white;
+border: none;
+  }
+
+  .event-footer{
+    margin-top: 200px;
+    padding-bottom: 100px;
+  }
+  .footer-txt{
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+margin-right: 700px;
+color: rgba(147, 147, 147, 1);
+  }

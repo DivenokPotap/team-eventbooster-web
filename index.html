@@ -5,11 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Booster</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
   <body>
+    <div class="modal" id="myModal">
+      <div class="modal-content">
+    <div class="close" onclick="document.getElementById('myModal').style.display='none'">
+      <img src="./images/close.svg" alt="1">
+    </div>
+          <div class="col">  
+      </div>
+      <img class="ModalIMG" src="" alt="1">
+      <div class="FULLINFO">
+      <div>
+      <h2 class="h2INFO">INFO</h2>
+      <p class="EventINFO"></p>
+      </div>
+      <div>
+      <h2 class="h2WHEN">WHEN</h2>
+      <p class="EventWHEN"></p>
+      </div>
+      <div>
+      <h2 class="h2WHERE">WHERE</h2>
+      <p class="EventWHERE"></p>
+      </div>
+      <div>
+      <h2 class="h2WHO">WHO</h2>
+      <p class="EventWHO"></p>
+      </div>
+      <div>
+      <h2 class="h2PRICES">BUY TICKETS</h2>
+      <button class="TICKETBTN">BUY TICKETS</button>
+      </div>
+    </div>
+    </div>
+      </div>
    <header class="event-header">
-    <img src="" alt="" class="logo">
+    <div class="container">
+    <div class="logo"><img src="./images/logo.svg" alt="12"></div>
+    <h1 class="Header-H1">FIND BEST EVENTS AROUND THE WORLD</h1>
+    <div class="event-search">
+      <div class="search-name">
+        <input class="event-input" id="event-by-name" type="text" placeholder="Start searching">
+        <div><a class="searchbtn" href="#"><img src="./images/search icon.svg" alt="?"></a></div>
+      </div>
+      <div class="search-country">
+        <input class="event-input" id="event-by-country" type="text" placeholder="Choose country">
+        <div><a class="searchbtn" href="#"><img src="./images/search icon.svg" alt="?"></a></div>
+      </div>
+    </div>
+      <section class="section-events">
+        <div id="eventsContainer"></div>
+        <div class="pagination" id="pagination"></div>
+      </section>
+      <footer class="event-footer">
+        <p class="footer-txt">© 2025 | All Rights Reserved | Developed with ♥ by GoITeens Students</p>
+      </footer>
+</div>
    </header>
     <script src="index.js"></script>
   </body>
