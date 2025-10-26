@@ -5,7 +5,7 @@ body {
   font-weight: 700;
   background-image: url(./images/bg\ body.png);
   background-size: cover;
-  width: 100%;
+ max-width: 1920px;
 }
 
 .event-header {
