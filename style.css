@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   background-image: url(./images/bg\ body.png);
   background-size: cover;
-  width: 100%;
 }
 
 .event-header {
@@ -18,14 +23,14 @@ body {
 .container {
   max-width: 1920px;
   width: 100%;
-  margin-left: 175px;
+  margin: 0 auto;
+  padding: 0;  
 }
 
 div.logo {
   background-image: url(./images/bg\ logo.svg);
   backdrop-filter: blur(30px);
   width: 240px;
-  margin-left: -200px;
   background-repeat: no-repeat;
 }
 
@@ -33,7 +38,7 @@ div.logo {
   position: absolute;
   color: rgba(220, 86, 197, 1);
   margin-left: 195px;
-  top: 50px;
+  top: 150px;
   width: 888px;
   height: 122px;
   font-weight: 900;
@@ -83,6 +88,12 @@ div.logo {
 .card {
   width: 200px;
   height: 315px;
+}
+
+.card:hover{
+  transition: transform 0.3s ease-in;
+  padding: 10px 10px;
+  transform:scale(1.1)
 }
 
 .EventsIMG {
@@ -166,8 +177,7 @@ div.logo {
   backdrop-filter: blur(2px);
   }
   .modal-content{
-    margin-top: 350px;
-    margin-left: 350px;
+    margin-left: 700px;
     width: 930px;
     height: 1023px;
     top: 201px;
@@ -213,13 +223,18 @@ letter-spacing: 0%;
   .TICKETBTN{
     width: 145px;
 height: 40px;
-top: 1037px;
-left: 625px;
+margin-top: 17px;
 opacity: 1;
 border-radius: 5px;
 background: rgba(76, 0, 254, 1);
 color: white;
 border: none;
+  }
+
+  .TICKETBTN:hover{
+    transition: transform 0.3s ease-in;
+    padding: 10px 10px;
+    transform:scale(1.1)
   }
 
   .event-footer{
