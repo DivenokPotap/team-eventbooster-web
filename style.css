@@ -368,4 +368,77 @@ color: rgba(147, 147, 147, 1);
 .section-events{
   margin: 0 auto;
 }
+.modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #220e2290;
+  backdrop-filter: blur(2px);
+  }
+  .modal-content{
+    margin-top: 75px;
+    margin-left: 5px;
+    left: 0px;
+    width: 310px;
+    height: 623px;
+    top: 10px;
+    border-top-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    opacity: 1;
+    background-color: rgba(255, 242, 253, 1);
+  }
+  .ModalIMG{
+    position: absolute;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-top: 35px;
+    margin-left: 100px;
+  }
+  .FULLINFO{
+    margin-top: 150px;
+    margin-left: 5px;
+  }
+ .FULLINFO h2{
+  margin-top: 10px;
+   color: rgba(220, 86, 197, 1);
+font-weight: 600;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+  }
+  .FULLINFO p{
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    max-width: 300px;
+   }
+  .close{
+   margin-top: 25px;
+   margin-left: 265px;
+   position: absolute;
+  }
+  .TICKETBTN{
+    width: 145px;
+height: 40px;
+margin-top: 5px;
+opacity: 1;
+border-radius: 5px;
+background: rgba(76, 0, 254, 1);
+color: white;
+border: none;
+  }
+
+  .TICKETBTN:hover{
+    transition: transform 0.3s ease-in;
+    padding: 10px 10px;
+    transform:scale(1.1)
+  }
 }
