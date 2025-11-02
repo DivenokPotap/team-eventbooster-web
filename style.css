@@ -178,7 +178,8 @@ div.logo {
   backdrop-filter: blur(2px);
   }
   .modal-content{
-    margin-left: 700px;
+    margin-top: 25px;
+    margin-left: 500px;
     width: 930px;
     height: 1023px;
     top: 201px;
