@@ -97,6 +97,7 @@ div.logo {
 }
 
 .EventsIMG {
+  object-fit: cover;
   width: 200px;
   height: 227px;
   border-top-left-radius: 50px;
@@ -189,6 +190,7 @@ div.logo {
   }
   .ModalIMG{
     position: absolute;
+    object-fit: cover;
     width: 500px;
     height: 641px;
     border-top-left-radius: 50px;
