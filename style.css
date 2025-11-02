@@ -275,11 +275,18 @@ color: rgba(147, 147, 147, 1);
 }
 
 @media (max-width: 320px) {
+  .event-header {
+    width: 100%;
+    background-image: url(./images/pic.png);
+    background-size: cover;
+    height: 350px;
+  }
+  
   .Header-H1 {
     position: absolute;
     color: rgba(220, 86, 197, 1);
     margin-left: 0px;
-    top: 150px;
+    top: 100px;
     width: 308px;
     height: 122px;
     font-weight: 900;
@@ -297,12 +304,12 @@ color: rgba(147, 147, 147, 1);
   
   .search-country {
     margin-left: 0px;
-    margin-top: 40px;
+    margin-top: 10px;
   }
   
   .event-search {
     margin-left: 25px;
-    margin-top: 125px;
+    margin-top: 50px;
   }
 
 
@@ -339,7 +346,7 @@ color: rgba(147, 147, 147, 1);
     grid-template-columns: repeat(auto-fill, minmax(125px, 2fr));
     gap: 0px;
     margin-left: 0px;
-    margin-top: -150px;
+    margin-top: -270px;
   }
   
 .card {
