@@ -21,10 +21,10 @@ function renderEvents() {
     div.classList.add('card');
 
     const imageUrl = event.images?.[0]?.url || '';
-    const venueName = event._embedded?.venues?.[0]?.name || 'Невідоме місце';
-    const description = event.info || 'Інформація відсутня';
-    const localDate = event.dates?.start?.localDate || 'Дата не вказана';
-    const eventName = event.name || 'Без назви';
+    const venueName = event._embedded?.venues?.[0]?.name || 'No place';
+    const description = event.info || 'No Info';
+    const localDate = event.dates?.start?.localDate || 'Dateless';
+    const eventName = event.name || 'Nameless';
 
     div.innerHTML = `
       <div class="decorpink"></div>
@@ -74,3 +74,54 @@ async function startApp() {
 
 
 startApp();
+
+let originalEvents = [];
+
+
+const syncOriginalOnce = setInterval(() => {
+  if (Array.isArray(events) && events.length) {
+    originalEvents = [...events];
+    clearInterval(syncOriginalOnce);
+  }
+}, 100);
+
+
+function filterEvents() {
+  const nameValue = EventByName.value.toLowerCase().trim();
+  const countryValue = EventByCountry.value.toLowerCase().trim();
+
+  events = originalEvents.filter(ev => {
+    const eventName = (ev.name || '').toLowerCase();
+    const venueName = (ev._embedded?.venues?.[0]?.name || '').toLowerCase(); // нижняя строка карточки
+
+    if (nameValue && countryValue) {
+      return eventName.includes(nameValue) && venueName.includes(countryValue);
+    }
+
+    if (nameValue) return eventName.includes(nameValue);
+
+    if (countryValue) return venueName.includes(countryValue);
+
+    return true;
+  });
+
+  renderEvents();
+}
+
+
+document.querySelectorAll('.searchbtn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); 
+    filterEvents();
+  });
+});
+
+
+[EventByName, EventByCountry].forEach(inp => {
+  inp?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      filterEvents();
+    }
+  });
+});

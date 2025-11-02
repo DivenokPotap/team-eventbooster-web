@@ -179,7 +179,7 @@ div.logo {
   backdrop-filter: blur(2px);
   }
   .modal-content{
-    margin-top: 25px;
+    margin-top: 0px;
     margin-left: 500px;
     width: 930px;
     height: 1023px;
@@ -189,7 +189,20 @@ div.logo {
     border-bottom-right-radius: 200px;
     opacity: 1;
     background-color: rgba(255, 242, 253, 1);
+    animation: scale-in 0.5s ease-out forwards;
   }
+
+  @keyframes scale-in {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
   .ModalIMG{
     position: absolute;
     object-fit: cover;
