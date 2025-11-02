@@ -29,6 +29,7 @@ body {
 
 div.logo {
   background-image: url(./images/bg\ logo.svg);
+  border-bottom-right-radius: 200px;
   backdrop-filter: blur(30px);
   width: 240px;
   background-repeat: no-repeat;
@@ -258,4 +259,113 @@ color: rgba(147, 147, 147, 1);
 }
 .section-events{
   margin-left: 350px;
+}
+
+@media (max-width: 320px) {
+  .Header-H1 {
+    position: absolute;
+    color: rgba(220, 86, 197, 1);
+    margin-left: 0px;
+    top: 150px;
+    width: 308px;
+    height: 122px;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  
+  }
+  .searchbtn {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 240px;
+  }
+  
+  .search-country {
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+  
+  .event-search {
+    margin-left: 25px;
+    margin-top: 125px;
+  }
+
+
+  .event-input {
+    width: 270px;
+    height: 40px;
+    top: 214px;
+    opacity: 1;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  div.logo {
+    content: url(./images/logo\ \(2\).svg);
+    border-bottom-right-radius: 80px;
+    backdrop-filter: blur(30px);
+    width: 100px;
+  }
+  .container {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;  
+  }
+
+  #eventsContainer {
+    width: 320px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 2fr));
+    gap: 0px;
+    margin-left: 0px;
+    margin-top: -150px;
+  }
+  
+.card {
+  margin-top: 200px;
+  width: 125px;
+  height: 130px;
+}
+
+.EventsIMG {
+  margin-left: 10px;
+  object-fit: cover;
+  width: 135px;
+  height: 177px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.decorpink {
+  width: 103px;
+  height: 103px;
+  margin-left: 50px;
+  margin-top: -10px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  opacity: 1;
+  border: 1px solid rgba(220, 86, 197, 0.3);
+  position: absolute;
+}
+
+
+.card:hover{
+  transition: transform 0.3s ease-in;
+  padding: 5px 5px;
+  transform:scale(1.1)
+}
+
+.header-contents{
+  margin: 0 auto;
+}
+.section-events{
+  margin: 0 auto;
+}
 }
