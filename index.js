@@ -1,4 +1,4 @@
-const API_URL = 'https://app.ticketmaster.com/discovery/v2/events.json?apikey=OJiJEoBCngaDdBAg2KhmO8pZN8FH4YRr&classificationName=music';
+const API_URL = 'https://app.ticketmaster.com/discovery/v2/events.json?apikey=Gjnp8mZOl9hCkgzxsWc2xc7fGlgYzAjT&classificationName=music';
 const EventByName = document.getElementById('event-by-name');
 const EventByCountry = document.getElementById('event-by-country');
 const eventsContainer = document.getElementById('eventsContainer');
