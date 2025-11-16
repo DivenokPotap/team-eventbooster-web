@@ -273,7 +273,27 @@ color: rgba(147, 147, 147, 1);
 .section-events{
   margin-left: 350px;
 }
-
+@media (max-width: 1280px) {
+  .section-events{
+    margin-left: 40px;
+  }
+  .header-contents{
+    margin-left: 40px;
+  }
+  .modal-content{
+    margin-top: 30px;
+    margin-left: 175px;
+    width: 930px;
+    height: 1023px;
+    top: 201px;
+    left: 175px;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    opacity: 1;
+    background-color: rgba(255, 242, 253, 1);
+    animation: scale-in 0.5s ease-out forwards;
+  }
+}
 @media (max-width: 320px) {
   .event-header {
     width: 100%;
@@ -462,4 +482,4 @@ border: none;
     padding: 10px 10px;
     transform:scale(1.1)
   }
-}
+};
