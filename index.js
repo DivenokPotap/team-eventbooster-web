@@ -1,4 +1,4 @@
-const API_URL = 'https://app.ticketmaster.com/discovery/v2/events.json?apikey=Gjnp8mZOl9hCkgzxsWc2xc7fGlgYzAjT&classificationName=music';
+const API_URL = 'https://app.ticketmaster.com/discovery/v2/events.json?apikey=Gjnp8mZOl9hCkgzxsWc2xc7fGlgYzAjT&classificationName=music&countryCode=US&size=200';
 const EventByName = document.getElementById('event-by-name');
 const EventByCountry = document.getElementById('event-by-country');
 const eventsContainer = document.getElementById('eventsContainer');
@@ -8,15 +8,15 @@ let events = [];
 const eventsPerPage = 20;
 let currentPage = 1;
 
-function renderEvents() {
+function renderEvents(eventsToRender = events) {
   eventsContainer.innerHTML = '';
 
-  if (!events || events.length === 0) {
+  if (!eventsToRender || eventsToRender.length === 0) {
     eventsContainer.innerHTML = '<p>Події не знайдено.</p>';
     return;
   }
 
-  events.forEach(event => {
+  eventsToRender.forEach(event => {
     const div = document.createElement('div');
     div.classList.add('card');
 
@@ -55,23 +55,76 @@ function renderEvents() {
 
 async function getEvents() {
   try {
-    console.log('Отримуємо події...');
     const response = await fetch(API_URL);
     const data = await response.json();
-    events = data._embedded?.events || [];
-    console.log('Подій отримано:', events.length);
 
-    renderEvents();
+    events = data._embedded?.events || [];
+    originalEvents = [...events];
+
+    return events;
   } catch (error) {
     console.error('Помилка при отриманні подій:', error);
-    eventsContainer.innerHTML = '<p>Не вдалося завантажити події </p>';
+    eventsContainer.innerHTML = '<p>Не вдалося завантажити події.</p>';
+    return [];
   }
 }
 
 async function startApp() {
   await getEvents();
+
+  seeEvents(currentPage);
+  renderPagination();
 }
 
+
+function seeEvents(page){
+  const start = (page - 1) * eventsPerPage;
+  const end = start + eventsPerPage;
+  const eventsToShow = events.slice(start, end);
+  renderEvents(eventsToShow);
+}
+
+function renderPagination(){
+  const pagination = document.getElementById("pagination");
+  pagination.innerHTML = "";
+  const totalPages = Math.ceil(events.length / eventsPerPage);
+
+  const backButton = document.createElement("button");
+  backButton.textContent = "<"
+  backButton.disabled = currentPage === 1;
+  backButton.onclick = () =>{
+    if (currentPage > 1){
+      currentPage--;
+      seeEvents(currentPage);
+      renderPagination();
+    }
+  };
+  pagination.append(backButton);
+
+  for (let i = 1; i <= totalPages; i++){
+    const eventBTN = document.createElement("button");
+    eventBTN.textContent = i;
+    if (i === currentPage) eventBTN.classList.add("activePAGE");
+    eventBTN.onclick = () => {
+      currentPage = i;
+      seeEvents(currentPage);
+      renderPagination();
+    }
+    pagination.appendChild(eventBTN);
+  }
+
+  const nextButton = document.createElement("button");
+  nextButton.textContent = ">";
+  nextButton.disabled = currentPage === totalPages;
+  nextButton.onclick = () => {
+    if (currentPage < totalPages){
+      currentPage++;
+      seeEvents(currentPage);
+      renderPagination();
+    }
+  };
+  pagination.append(nextButton);
+}
 
 startApp();
 
@@ -104,8 +157,10 @@ function filterEvents() {
 
     return true;
   });
-
-  renderEvents();
+  
+  currentPage = 1;
+  seeEvents(currentPage);
+  renderPagination();
 }
 
 
@@ -125,3 +180,6 @@ document.querySelectorAll('.searchbtn').forEach(btn => {
     }
   });
 });
+
+console.log("events loaded:", events.length);
+console.log("original:", originalEvents.length);
