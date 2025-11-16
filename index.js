@@ -3,6 +3,7 @@ const EventByName = document.getElementById('event-by-name');
 const EventByCountry = document.getElementById('event-by-country');
 const eventsContainer = document.getElementById('eventsContainer');
 const eventImages = document.querySelectorAll('.EventsIMG');
+const Paytrans = document.getElementById('Paytrans');
 
 let events = [];
 const eventsPerPage = 20;
@@ -52,6 +53,13 @@ function renderEvents(eventsToRender = events) {
     eventsContainer.appendChild(div);
   });
 }
+
+Paytrans.addEventListener('click', () =>{
+  const modal = document.getElementById('myModal');
+  const Pmodal = document.getElementById('PaymentModal');
+  Pmodal.style.display = 'block';
+  modal.style.display = 'none';
+});
 
 async function getEvents() {
   try {

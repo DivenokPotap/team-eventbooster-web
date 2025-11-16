@@ -35,11 +35,27 @@
       </div>
       <div>
       <h2 class="h2PRICES">BUY TICKETS</h2>
-      <button class="TICKETBTN">BUY TICKETS</button>
+      <button id="Paytrans" class="TICKETBTN">BUY TICKETS</button>
       </div>
     </div>
     </div>
       </div>
+
+
+      <div class="Paymodal" id="PaymentModal">
+        <div class="modal-pay">
+      <div class="P-close" onclick="document.getElementById('PaymentModal').style.display='none'">
+        <img src="./images/close.svg" alt="1">
+      </div>
+        <div class="PAYINFO">
+        <input class="creditInfo" type="text" placeholder="Ваша кредитна картка">
+        <input class="PhoneInfo" type="text" placeholder="Ваш номер телефону">
+        <input class="EmailInfo" type="text" placeholder="Ваша електронна пошта">
+        <button class="payBTN" onclick="document.getElementById('PaymentModal').style.display='none'">Оплатити</button>
+        </div>
+      </div>
+      </div>
+        </div>
    <header class="event-header">
     <div class="container">
     <div class="logo"><img src="./images/logo.svg" alt="12"></div>

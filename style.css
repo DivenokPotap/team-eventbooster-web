@@ -49,6 +49,107 @@ div.logo {
   text-align: center;
 
 }
+.Paymodal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #220e2290;
+  backdrop-filter: blur(2px);
+  }
+  .modal-pay{
+    width: 450px;
+    height: 200px;
+    margin-top: 425px;
+    margin-left: 425px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    opacity: 1;
+    background-color: rgba(255, 242, 253, 1);
+  }
+  .PAYINFO{
+   margin-top: 50px;
+   margin-left: 30px;
+   position: absolute;
+  }
+  .creditInfo{
+    width: 200px;
+    height: 30px;
+    border-radius: 25px;
+    border: 2px solid rgba(220, 86, 197, 1);
+    color:rgba(220, 86, 197, 1);
+    background-color: rgb(45, 35, 55);
+  }
+  .creditInfo::placeholder{
+    color: rgba(220, 86, 197, 1);
+  }
+  .creditInfo[type="text"] {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 10px;
+    border: 2px solid rgba(220, 86, 197, 1);
+  }
+
+  .PhoneInfo{
+    position: absolute;
+    margin-top: 40px;
+    margin-left: -200px;
+    width: 200px;
+    height: 30px;
+    border-radius: 25px;
+    border: 2px solid rgba(220, 86, 197, 1);
+    color:rgba(220, 86, 197, 1);
+    background-color: rgb(45, 35, 55);
+  }
+  .PhoneInfo::placeholder{
+    color: rgba(220, 86, 197, 1);
+  }
+  .PhoneInfo[type="text"] {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 10px;
+    border: 2px solid rgba(220, 86, 197, 1);
+  }
+
+  .EmailInfo{
+    position: absolute;
+    margin-top: 80px;
+    margin-left: -200px;
+    width: 200px;
+    height: 30px;
+    border-radius: 25px;
+    border: 2px solid rgba(220, 86, 197, 1);
+    color:rgba(220, 86, 197, 1);
+    background-color: rgb(45, 35, 55);
+  }
+  .EmailInfo::placeholder{
+    color: rgba(220, 86, 197, 1);
+  }
+  .EmailInfo[type="text"] {
+    font-family: "Montserrat", sans-serif;
+    padding-left: 10px;
+    border: 2px solid rgba(220, 86, 197, 1);
+  }
+
+  .payBTN{
+    margin-top: 15px;
+    margin-left: 30px;
+    position: absolute;
+    width: 150px;
+    height: 75px;
+    border: 2px solid rgba(220, 86, 197, 1);
+    color:rgba(220, 86, 197, 1);
+    background-color: rgb(45, 35, 55);
+    font-size: 20px;
+    border-radius: 15px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .P-close{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 400px;
+  }
 
 .event-input {
   width: 270px;
@@ -299,6 +400,108 @@ color: rgba(147, 147, 147, 1);
   }
 }
 @media (max-width: 320px) {
+  .Paymodal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #220e2290;
+    backdrop-filter: blur(2px);
+    }
+    .modal-pay{
+      width: 270px;
+      height: 300px;
+      margin-top: 250px;
+      margin-left: 20px;
+      border-top-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      opacity: 1;
+      background-color: rgba(255, 242, 253, 1);
+    }
+    .PAYINFO{
+     margin-top: 60px;
+     margin-left: 30px;
+     position: absolute;
+    }
+    .creditInfo{
+      width: 200px;
+      height: 30px;
+      border-radius: 25px;
+      border: 2px solid rgba(220, 86, 197, 1);
+      color:rgba(220, 86, 197, 1);
+      background-color: rgb(45, 35, 55);
+    }
+    .creditInfo::placeholder{
+      color: rgba(220, 86, 197, 1);
+    }
+    .creditInfo[type="text"] {
+      font-family: "Montserrat", sans-serif;
+      padding-left: 10px;
+      border: 2px solid rgba(220, 86, 197, 1);
+    }
+  
+    .PhoneInfo{
+      position: absolute;
+      margin-top: 40px;
+      margin-left: -200px;
+      width: 200px;
+      height: 30px;
+      border-radius: 25px;
+      border: 2px solid rgba(220, 86, 197, 1);
+      color:rgba(220, 86, 197, 1);
+      background-color: rgb(45, 35, 55);
+    }
+    .PhoneInfo::placeholder{
+      color: rgba(220, 86, 197, 1);
+    }
+    .PhoneInfo[type="text"] {
+      font-family: "Montserrat", sans-serif;
+      padding-left: 10px;
+      border: 2px solid rgba(220, 86, 197, 1);
+    }
+  
+    .EmailInfo{
+      position: absolute;
+      margin-top: 80px;
+      margin-left: -200px;
+      width: 200px;
+      height: 30px;
+      border-radius: 25px;
+      border: 2px solid rgba(220, 86, 197, 1);
+      color:rgba(220, 86, 197, 1);
+      background-color: rgb(45, 35, 55);
+    }
+    .EmailInfo::placeholder{
+      color: rgba(220, 86, 197, 1);
+    }
+    .EmailInfo[type="text"] {
+      font-family: "Montserrat", sans-serif;
+      padding-left: 10px;
+      border: 2px solid rgba(220, 86, 197, 1);
+    }
+  
+    .payBTN{
+      margin-top: 125px;
+      margin-left: -175px;
+      position: absolute;
+      width: 150px;
+      height: 75px;
+      border: 2px solid rgba(220, 86, 197, 1);
+      color:rgba(220, 86, 197, 1);
+      background-color: rgb(45, 35, 55);
+      font-size: 20px;
+      border-radius: 15px;
+      font-family: "Montserrat", sans-serif;
+    }
+    .P-close{
+      position: absolute;
+      margin-top: 15px;
+      margin-left: 230px;
+    }
+  
   .event-header {
     width: 100%;
     background-image: url(./images/pic.png);
@@ -488,7 +691,7 @@ border: none;
   }
 
   #pagination {
-    margin-top: 200px;
+    margin-top: 220px;
     margin-left: 5px;
   }
   
