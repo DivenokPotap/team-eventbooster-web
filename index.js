@@ -4,6 +4,29 @@ const EventByCountry = document.getElementById('event-by-country');
 const eventsContainer = document.getElementById('eventsContainer');
 const eventImages = document.querySelectorAll('.EventsIMG');
 const Paytrans = document.getElementById('Paytrans');
+const modal = document.getElementById("teamModal");
+const openBtn = document.getElementById("openTeam");
+const closeBtn = document.getElementById("closeTeam");
+
+const slides = document.querySelectorAll(".slide");
+let index = 0;
+
+
+openBtn.onclick = () => modal.style.display = "flex";
+
+
+closeBtn.onclick = () => modal.style.display = "none";
+window.onclick = (e) => { if(e.target === modal) modal.style.display = "none"; };
+
+
+document.querySelector(".next").onclick = () => changeSlide(1);
+document.querySelector(".prev").onclick = () => changeSlide(-1);
+
+function changeSlide(n){
+  slides[index].classList.remove("active");
+  index = (index + n + slides.length) % slides.length;
+  slides[index].classList.add("active");
+}
 
 let events = [];
 const eventsPerPage = 20;
