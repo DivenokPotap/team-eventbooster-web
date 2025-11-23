@@ -388,6 +388,12 @@ color: rgba(147, 147, 147, 1);
   border-radius: 6px;
   cursor: pointer;
   width: max-content;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 1;
+  border: 1px solid rgba(220, 86, 197, 1);
+  background-color: transparent;
+  color: rgba(220, 86, 197, 1);
 }
 
 .button-team-wrapper {
@@ -417,7 +423,7 @@ color: rgba(147, 147, 147, 1);
   background: #fefefe;
   padding: 25px;
   width: 700px;
-  height: 600px;
+  height: 640px;
   border-radius: 14px;
   position: relative;
   box-shadow: 0 0 25px rgba(0,0,0,0.8);
@@ -425,6 +431,10 @@ color: rgba(147, 147, 147, 1);
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  border-top-left-radius: 200px;
+  border-bottom-right-radius: 200px;
+  background-color: rgba(255, 242, 253, 1);
+  animation: scale-in 0.5s ease-out forwards;
 }
 
 
@@ -433,6 +443,7 @@ color: rgba(147, 147, 147, 1);
   top: -40px; right: 15px;
   font-size: 30px;
   cursor: pointer;
+  color: rgba(220, 86, 197, 1);
 }
 
 
@@ -442,6 +453,18 @@ color: rgba(147, 147, 147, 1);
 .slide {
   display: none;
 }
+.slide p{
+  color: rgba(220, 86, 197, 1);
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.slide h3{
+  color: rgba(220, 86, 197, 1);
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 .slide.active {
   display: flex;
   flex-direction: column;
@@ -450,14 +473,18 @@ color: rgba(147, 147, 147, 1);
 .slide img {
   width: 250px;
   border-radius: 10px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
+.team-modal h2{
+  color: rgba(220, 86, 197, 1);
+}
 
 .controls {
   position: absolute;
-  top: 85%;
-  left: 40px;
+  top: 92%;
+  left: 45%;
   width: 8%;
   display: flex;
   justify-content: space-between;
@@ -469,9 +496,10 @@ color: rgba(147, 147, 147, 1);
   background: none;
   border: none;
   color: #000;
-  font-size: 32px;
+  font-size: 35px;
   cursor: pointer;
   font-weight: bold;
+  color: rgba(220, 86, 197, 1);
 }
 
 
@@ -499,6 +527,128 @@ color: rgba(147, 147, 147, 1);
     background-color: rgba(255, 242, 253, 1);
     animation: scale-in 0.5s ease-out forwards;
   }
+}
+@media (max-width: 768px) {
+  .Header-H1 {
+    position: absolute;
+    color: rgba(220, 86, 197, 1);
+    margin-left: 0px;
+    top: 150px;
+    width: 748px;
+    height: 122px;
+    font-weight: 900;
+    font-size: 55px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+  
+  }
+  
+.searchbtn {
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 240px;
+}
+
+.search-country {
+  margin-left: 320px;
+  margin-top: -40px;
+}
+
+.event-search {
+  margin-left: 80px;
+  margin-top: 125px;
+}
+  .section-events{
+    margin-left: 20px;
+    margin-top: 300px;
+  }
+  .header-contents{
+    margin-left: 20px;
+  }
+  .modal-content{
+    margin-top: 130px;
+    margin-left: 10px;
+    width: 740px;
+    height: 823px;
+    top: 201px;
+    left: 175px;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    opacity: 1;
+    background-color: rgba(255, 242, 253, 1);
+    animation: scale-in 0.5s ease-out forwards;
+  }
+  .ModalIMG{
+    position: absolute;
+    object-fit: cover;
+    width: 450px;
+    height: 541px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin-top: 165px;
+    margin-left: 20px;
+  }
+  .FULLINFO{
+    margin-top: 170px;
+    margin-left: 500px;
+    position: absolute;
+  }
+ .FULLINFO h2{
+   color: rgba(220, 86, 197, 1);
+font-weight: 600;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+  }
+  .FULLINFO p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    max-width: 200px;
+   }
+  .close{
+   margin-top: 50px;
+   margin-left: 850px;
+   position: absolute;
+  }
+  .TICKETBTN{
+    width: 145px;
+height: 40px;
+margin-top: 17px;
+opacity: 1;
+border-radius: 5px;
+background: rgba(76, 0, 254, 1);
+color: white;
+border: none;
+  }
+  #eventsContainer {
+    width: 750px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    gap: 0px;
+    margin-left: 0px;
+    margin-top: -270px;
+  }
+  #pagination {
+    margin-top: 100px;
+    margin-left: 155px;
+  }  
+    .modal-pay{
+      width: 450px;
+      height: 200px;
+      margin-top: 425px;
+      margin-left: 145px;
+      border-top-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      opacity: 1;
+      background-color: rgba(255, 242, 253, 1);
+    }
+    .event-footer{
+      margin-top: 100px;
+      padding-bottom: 100px;
+    }
 }
 @media (max-width: 320px) {
   .Paymodal{
@@ -810,5 +960,54 @@ border: none;
 
   .event-footer{
     margin-top:50px;
+  }
+  .team-modal-content {
+    background: #fefefe;
+    padding: 25px;
+    width: 300px;
+    height: 640px;
+    border-radius: 14px;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: rgba(255, 242, 253, 1);
+    animation: scale-in 0.5s ease-out forwards;
+  }
+  .close {
+    position: absolute;
+    top: 0px; right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(220, 86, 197, 1);
+  }
+  .controls {
+    position: absolute;
+    top: 92%;
+    left: 40%;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .team-modal h2{
+    color: rgba(220, 86, 197, 1);
+    margin-top: 10px
+  }
+  .slide p{
+    color: rgba(220, 86, 197, 1);
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .slide h3{
+    color: rgba(220, 86, 197, 1);
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 };
