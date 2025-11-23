@@ -529,6 +529,10 @@ color: rgba(147, 147, 147, 1);
   }
 }
 @media (max-width: 768px) {
+  .card{
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
   .Header-H1 {
     position: absolute;
     color: rgba(220, 86, 197, 1);
@@ -603,7 +607,7 @@ letter-spacing: 0%;
   }
   .FULLINFO p{
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 100%;
     letter-spacing: 0%;
     max-width: 200px;
@@ -914,7 +918,7 @@ letter-spacing: 0%;
   .FULLINFO p{
     margin-top: 5px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 100%;
     letter-spacing: 0%;
     max-width: 300px;
